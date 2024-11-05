@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+
+		body{background-color: red;}
+		#path1{
+			position:absolute;
+			background-color:green;
+			height:75px;
+			width:350px;
+			left:0px;
+			top:500px;
+			z-index:2;
+		}
+
+		#path2{
+			position:absolute;
+			background-color:green;
+			height:425px;
+			width:75px;
+			left:350px;
+			top:150px;
+			z-index:2;
+		}
+
+		#path3{
+			position:absolute;
+			background-color:green;
+			height:75px;
+			width:150px;
+			left:425px;
+			top:150px;
+			z-index:2;
+		}
+
+		#path4{
+			position:absolute;
+			background-color:green;
+			height:175px;
+			width:75px;
+			left:565px;
+			top:150px;
+			z-index:2;
+		}
+
+		#path5{
+			position:absolute;
+			background-color:green;
+			height:75px;
+			width:600px;
+			left:565px;
+			top:325px;
+			z-index:2;
+		}
+
+		#path6{
+			position:absolute;
+			background-color:green;
+			height:325px;
+			width:75px;
+			left:1165px;
+			top:75px;
+			z-index:2;
+		}
+
+		#path7{
+			position:absolute;
+			background-color:green;
+			height:75px;
+			width:300px;
+			left:1165px;
+			top:60px;
+			z-index:2;
+		}
+
+		#circle{
+			background-color:blue;
+			border-radius: 50%;
+			height:50px;
+			width:50px;
+			left:0px;
+			top:515px;
+			position:absolute;
+			z-index:3;
+			animation-name:circlemotion;
+			animation-duration:10s;
+		}
+
+		@keyframes circlemotion{
+			0%{top:500px;
+				left:0px;}
+
+			12.5%{left:350px;
+				top:500px}
+
+			25%{left:350px;
+				top:150px;}
+
+			37.5%{left:565px;
+				  top:150px;}
+
+			50%{left:565px;
+				top:325px;}
+
+			62.5%{top:325px;
+				left:1165px;}
+
+			75%{top:60px;
+				left:1165px;}
+
+			82.5%{top:60px;
+				left:1400px;}
+
+			95%{
+				background-image:url(blue.png);
+
+			}
+
+			96%{ 
+				width:50px;
+				height:50px;
+
+				background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfODIlODl2R4bhBg0AxFoZAI3A1vKiGQR-Yg&s);
+				background-size:contain;
+				background-position: center;
+				background-repeat: no-repeat;
+
+			}
+
+			98%{
+				width:100%;
+				height:800px;
+
+			}
+
+		
+					}
+		
+
+	</style>
+	
+</head>
+<body>
+	<div id="circle"></div>
+	<div id= "path1"></div>
+	<div id= "path2"></div>
+	<div id= "path3"></div>
+	<div id= "path4"></div>
+	<div id= "path5"></div>
+	<div id= "path6"></div>
+	<div id= "path7"></div>
+</body>
+</html>

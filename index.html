@@ -19,6 +19,19 @@
 
  			}
 
+ 			.moon{
+ 				width:300px;
+ 				height:300px;
+				background-image:url(moon.png);
+ 				background-size:contain;
+ 				animation-duration:6s;
+ 				position:relative;
+ 				z-index: 5;
+ 				top:0px;
+
+
+ 			}
+
  			body{
  				margin:0px;
  			}
@@ -87,6 +100,17 @@
  				z-index:2;
 
  			}
+
+ 			#tower{
+ 				width:300px;
+ 				height:400px;
+ 				background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlTxur7PYcVruNIKOiwi3X-MYRwYVLSB9lbg&s);
+ 				background-size:contain;
+ 				z-index:5;
+ 				position:absolute;
+ 				top:700px;
+ 				left:600px;
+ 			}
 			
 			@keyframes sunset{
 				0%{top:0px;}
@@ -112,27 +136,63 @@
 
 
 			.cloudsLeft{
-			animation-duration: 5s;
+			animation-duration: 6s;
 			animation-name:cloudpartleft;
 
 		}
 
 			.cloudsRight{
-			animation-duration: 5s;
+			animation-duration: 6s;
 			animation-name:cloudpartright;
 			}
 
 			@keyframes cloudpartleft{
 				
 
-				100%{left:-900px;}
+				50%{left:-900px;}
+				100%{}
 
 				}
+
+
 
 			@keyframes cloudpartright{
 			
 
-				100%{left:1750px;}
+				50%{left:1750px;}
+				100%{}
+}
+
+.stars{
+	z-index: 10;
+	width:100px;
+	height:100px;
+	background-image:url(star.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+	position:absolute;
+
+}
+
+#star1{
+	left:50px;
+	top:-50px;
+
+}
+#star2{
+	left:175px;
+	top:150px;
+
+}
+#star3{
+	left:875px;
+	top:-50px;
+
+}
+#star4{
+	left:1000px;
+	top:150px;
+
 }
 
 		</style>
@@ -141,7 +201,7 @@
 
 <body>
 
-
+<div id = tower></div>
 
 
  <center>
@@ -166,6 +226,27 @@
  			cloud2.classList.add("cloudsLeft");
  			cloud3.classList.add("cloudsRight");
  			cloud4.classList.add("cloudsRight");
+
+ 			function addMoon (){
+ 				sun.classList.add("moon")
+ 				sun.id= "moon"
+ 			}
+
+ 			function becomeStars (){
+ 			cloud1.classList.add("stars")
+ 			cloud1.id = "star1"
+ 			cloud2.classList.add("stars")
+ 			cloud2.id = "star2"
+ 			cloud3.classList.add("stars")
+ 			cloud3.id = "star3"
+ 			cloud4.classList.add("stars")
+ 			cloud4.id = "star4"
+
+
+ 			}
+
+ 			setTimeout(addMoon,2000)
+ 			setTimeout(becomeStars,2000)
  		})
 
  	</script>
