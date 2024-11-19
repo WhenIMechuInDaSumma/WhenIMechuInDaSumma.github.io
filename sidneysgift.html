@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	.sidneysspecialgift{
+		width:50px;
+		height:50px;
+		background-size:contain;
+		background-color:blue;
+	}
+
+</style>
+</head>
+<body>
+
+<div id = "blocker1"></div>
+<div id = "blocker2"></div>
+<div id = "blocker3"></div>
+<div id = "blocker4"></div>
+<div id = "blocker5"></div>
+<div id = "blocker6"></div>
+<div id = "blocker7"></div>
+<div id = "blocker8"></div>
+
+
+
+<script type="text/javascript">
+	
+	let counter = 0;
+
+	function makeSidneysspecialgift (){
+		counter=counter+1
+
+	let sidneysspecialgift = document.createElement("div")
+	document.body.appendChild(sidneysspecialgift)
+	sidneysspecialgift.classList.add("sidneysspecialgift")
+	sidneysspecialgift.style.backgroundImage="url("+counter +".jpeg)"
+
+
+	}
+
+</script>
+
+</body>
+</html>

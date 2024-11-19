@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+		
+		.bricks{
+			width:40px;
+			height:15px;
+			background-color:grey;
+			margin:3px;
+			display:inline-block;
+		}
+
+		#wordbox1{
+			width:135px;
+			height:125px;
+			background-color:white;
+			position:absolute;
+			top:3px;
+			left:100px;
+		}
+
+		#wordbox2{
+			width:135px;
+			height:125px;
+			background-color:white;
+			position:absolute;
+			top:203px;
+			left:100px;
+		}
+
+		#wordbox3{
+			width:50px;
+			height:350px;
+			background-color:white;
+			position:absolute;
+			top:3px;
+			left:325px;
+		}
+		#wordbox4{
+			width:140px;
+			height:75px;
+			background-color:white;
+			position:absolute;
+			top:80px;
+			left:465px;
+		}
+		#wordbox5{
+			width:140px;
+			height:75px;
+			background-color:white;
+			position:absolute;
+			top:205px;
+			left:465px;
+		}
+		#wordbox6{
+			width:50px;
+			height:350px;
+			background-color:white;
+			position:absolute;
+			top:3px;
+			left:600px;
+		}
+		#wordbox7{
+			width:140px;
+			height:275px;
+			background-color:white;
+			position:absolute;
+			top:3px;
+			left:700px;
+		}
+		#wordbox8{
+			width:50px;
+			height:350px;
+			background-color:white;
+			position:absolute;
+			top:3px;
+			left:835px;
+		}
+		#wordbox9{
+			width:140px;
+			height:275px;
+			background-color:white;
+			position:absolute;
+			top:3px;
+			left:925px;
+			}
+		#wordbox10{
+			width:50px;
+			height:350px;
+			background-color:white;
+			position:absolute;
+			top:3px;
+			left:1065px;
+		}
+		#wordbox11{
+			width:200px;
+			height:225px;
+			background-color:white;
+			position:absolute;
+			top:53px;
+			left:1150px;
+
+	</style>
+	
+</head>
+<body>
+
+<div id ="shooter"></div>
+<div id="wordbox1"></div>
+<div id="wordbox2"></div>
+<div id="wordbox3"></div>
+<div id="wordbox4"></div>
+<div id="wordbox5"></div>
+<div id="wordbox6"></div>
+<div id="wordbox7"></div>
+<div id="wordbox8"></div>
+<div id="wordbox9"></div>
+<div id="wordbox10"></div>
+<div id="wordbox11"></div>
+
+<script type="text/javascript">
+	
+function makeBrick(){
+	let brick = document.createElement("div")
+	document.body.appendChild(brick)
+	brick.classList.add('bricks')
+}
+
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+makeBrick()
+
+makeBrick()
+makeBrick()
+makeBrick()
+makeBrick()
+
+</script>
+</body>
+</html>
