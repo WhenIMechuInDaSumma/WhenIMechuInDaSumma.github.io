@@ -5,7 +5,117 @@
 
 <style type="text/css">
 
-		
+			#Seagull1{
+				width:100px;
+				height:50px;
+				position:absolute;
+				top:425px;
+				left:1150px;
+				background-image:url(seagull.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				z-index:7;
+			}
+
+			#Seagull2{
+				width:100px;
+				height:50px;
+				position:absolute;
+				top:400px;
+				left:1225px;
+				background-image:url(seagull.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				z-index:7;
+			}
+
+			#Seagull3{
+				width:100px;
+				height:50px;
+				position:absolute;
+				top:375px;
+				left:1300px;
+				background-image:url(seagull.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				z-index:7;
+			}
+
+			#Seagull4{
+				width:100px;
+				height:50px;
+				position:absolute;
+				top:475px;
+				left:1225px;
+				background-image:url(seagull.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				z-index:7;
+			}
+
+			#Seagull5{
+				width:100px;
+				height:50px;
+				position:absolute;
+				top:500px;
+				left:1300px;
+				background-image:url(seagull.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				z-index:7;
+			}
+
+			#tower{
+				width:200px;
+				height:500px;
+				position:absolute;
+				top:300px;
+				left:800px;
+				background-image:url(https://static.wikia.nocookie.net/teen-titans-go/images/c/c5/Titans_tower_alpha.png/revision/latest/thumbnail/width/360/height/450?cb=20151218210414);
+				background-size:contain;
+				background-repeat: no-repeat;
+				z-index:7;
+			}
+
+			#dolphin1{
+
+				width:400px;
+				height:150px;
+				position:absolute;
+				top:550px;
+				left:150px;
+				background-image:url(Dolphin.png);
+				background-size:contain;
+				background-repeat: no-repeat;
+				z-index: 7;
+			}
+
+			#dolphin2{
+
+				width:400px;
+				height:150px;
+				position:absolute;
+				top:450px;
+				left:300px;
+				background-image:url(Dolphin.png);
+				background-size:contain;
+				background-repeat: no-repeat;
+				z-index: 7;
+			}
+
+			#dolphin3{
+
+				width:400px;
+				height:150px;
+				position:absolute;
+				top:550px;
+				left:400px;
+				background-image:url(Dolphin.png);
+				background-size:contain;
+				background-repeat: no-repeat;
+				z-index: 7;
+			}
+
  			#sun{
  				width:300px;
  				height:300px;
@@ -113,14 +223,30 @@
 					background-image:url(moon.png);
 				    background-size:contain;
 				    width:250;
-				    height:250;
-				}
+				    height:250;}
 
 
 				100%{top:0px;
-					background-image:url(https://upload.wikimedia.org/wikipedia/commons/0/0b/Moon_Sketch_vector.svg);
+					background-image:url(https://upload.wikimedia.org/wikipedia/commons/0/0b/Moon_Sketch_vector.svg);}
+			}
+
+			@keyframes sunrise{
+				0%{top:0px;}
+
+				25%{
+					background-image:url(moon.png);
 
 				}
+
+				50%{top:500px;
+					background-image:url(sun.png);
+				    background-size:contain;
+				    width:250;
+				    height:250;}
+
+
+				100%{top:0px;
+					background-image:url(sun.png);}
 			}
 
 
@@ -144,7 +270,6 @@
 				}
 
 
-
 			@keyframes cloudpartright{
 			
 
@@ -152,7 +277,20 @@
 				100%{}
 }
 
-.stars{
+			@keyframes starspartleft{
+
+				50%{left:-900px;}
+				100%{}
+}
+			
+			@keyframes starspartright{
+
+				50%{left:1750px;}
+				100%{}
+
+			}
+
+.starsleft{
 	z-index: 10;
 	width:100px;
 	height:100px;
@@ -163,24 +301,34 @@
 
 }
 
+.starsright{
+	z-index: 10;
+	width:100px;
+	height:100px;
+	background-image:url(star.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+	position:absolute;
+}
+
 #star1{
 	left:50px;
-	top:-50px;
+	top:0px;
 
 }
 #star2{
 	left:175px;
-	top:150px;
+	top:200px;
 
 }
 #star3{
-	left:875px;
-	top:-50px;
+	left:1250px;
+	top:0px;
 
 }
 #star4{
-	left:1000px;
-	top:150px;
+	left:1075px;
+	top:200px;
 
 }
 
@@ -197,24 +345,38 @@
  	<div id="water"></div>
  	<div id="sky"></div>
  	<div id="sun"></div>
+ 	<div id="Seagull1"></div>
+ 	<div id="Seagull2"></div>
+ 	<div id="Seagull3"></div>
+ 	<div id="Seagull4"></div>
+ 	<div id="Seagull5"></div>
+ 	<a href = "animation.html"><div id="tower"></div></a>
+ <a href = "gambling.html"><div id="dolphin1"></div></a>
+ <a href = "Day1.html"><div id="dolphin2"></div></a>
+ <a href = "Day2.html"><div id="dolphin3"></div></a>
  <a href="journal.html"><div  id="cloud1"></div></a>
  <a href="jumpscare.html"><div  id="cloud2"></div></a>
- <div  id="cloud3"></div>
- <div  id="cloud4"></div>
+ <a href="random.html"><div  id="cloud3"></div></a>
+ <a href="game.html"><div  id="cloud4"></div></a>
  <h1>Harry Patrick</h1>
  </center>
  
 
  	<script type="text/javascript">
 
+ 		let counter = 0;
+
  		sun.addEventListener("click", function(){
- 			console.log("hello harry?");
+ 			counter=counter+1;
+ 			if(counter%2==1){
  			sun.style.animationName = "sunset";
  			sky.style.backgroundColor = "black";
  			cloud1.classList.add("cloudsLeft");
  			cloud2.classList.add("cloudsLeft");
  			cloud3.classList.add("cloudsRight");
  			cloud4.classList.add("cloudsRight");
+			
+			
 
  			function addMoon (){
  				sun.classList.add("moon")
@@ -222,21 +384,72 @@
  			}
 
  			function becomeStars (){
- 			cloud1.classList.add("stars")
+ 			cloud1.classList.add("starsleft")
  			cloud1.id = "star1"
- 			cloud2.classList.add("stars")
+ 			cloud2.classList.add("starsleft")
  			cloud2.id = "star2"
- 			cloud3.classList.add("stars")
+ 			cloud3.classList.add("starsright")
  			cloud3.id = "star3"
- 			cloud4.classList.add("stars")
+ 			cloud4.classList.add("starsright")
  			cloud4.id = "star4"
 
 
- 			}
-
+ 			} // end of become stars
+ 			
  			setTimeout(addMoon,2000)
  			setTimeout(becomeStars,2000)
- 		})
+ 		} // this is the closing bracket of if statement//
+
+ 	
+
+ 	 else if (counter%2==0) {
+
+ 	 	moon.style.animationName = "sunrise";
+ 	 	sky.style.backgroundColor = "lightblue";
+
+
+ 	 	function addSun (){
+ 				moon.id="sun"
+ 			}
+
+ 	 	 setTimeout(addSun,2000)
+
+ 	 	 function becomeClouds (){
+
+ 	 	 	starsleft.style.animationName = "starspartleft"
+ 	 	 	starsright.style.animationName = "starspartright"
+
+ 	 	 	star1.classList.remove("stars")
+ 	 	 	 star1.classList.add("cloudsLeft")
+
+ 			star2.classList.remove("stars")
+ 			star2.classList.add("cloudsLeft")
+
+ 			star3.classList.remove("stars")
+ 			star3.classList.add("cloudsRight")
+
+ 			star4.classList.remove("stars")
+ 			 star4.classList.add("cloudsRight")
+
+
+ 			 star1.id = "cloud1"
+ 			  star2.id = "cloud2"
+ 			   star3.id = "cloud3"
+ 			   star4.id = "cloud4"
+ 			
+	 	}
+
+	 	 setTimeout(becomeClouds,2000)
+
+
+ 			
+
+
+ 	 } //endofelse statment
+
+ 	} // end of function
+
+ 	) // end of event listener
 
  	</script>
 

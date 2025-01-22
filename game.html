@@ -101,13 +101,25 @@
 			position:absolute;
 			top:53px;
 			left:1150px;
+		}
+
+		#shooter{
+			width:75px;
+			height:75px;
+			background-image:url(shooter.png);
+			background-size:contain;
+			position:absolute;
+			top:750px;
+			z-index:20;
+			position:absolute;
+		}
 
 	</style>
 	
 </head>
 <body>
 
-<div id ="shooter"></div>
+<div id="shooter"></div>
 <div id="wordbox1"></div>
 <div id="wordbox2"></div>
 <div id="wordbox3"></div>
@@ -121,6 +133,21 @@
 <div id="wordbox11"></div>
 
 <script type="text/javascript">
+	let left = 700
+	shooter.style.left = left + "px"
+
+	document.addEventListener("keydown", function(event){
+		
+		if(event.keyCode==39){
+			shooter.style.left = left + "px"
+			left = left +10;
+		}
+
+		else if(event.keyCode==37){
+			shooter.style.left = left + "px"
+			left = left -10;
+		}
+	})
 	
 function makeBrick(){
 	let brick = document.createElement("div")

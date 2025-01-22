@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+
+		body{background-image:url(Harry.jpeg)}
+		
+		#Tenazin{
+			width:300px;
+			height:300px;
+			background-image:url(Tenzin.jpeg);
+			background-size:contain;
+			position:absolute;
+			transition:.5s;
+			
+		}
+
+		#Sidney{
+			width:300px;
+			height:300px;
+			background-image:url(Sidney.jpeg);
+			background-size:contain;
+			position:absolute;
+			transition:.5s;
+		}
+
+
+	</style>
+	
+</head>
+<body>
+
+	<div id = "Tenazin"></div>
+	<div id = "Sidney"></div>
+	<script type = "text/javascript">
+
+	function boom(){
+		let a = Math.random()*1000 
+		let b = Math.random()*1000
+		let c = Math.random()*1000 
+		let d = Math.random()*1000
+
+		console.log(a)
+		console.log(b)
+		console.log(c)
+		console.log(d)
+
+		Tenazin.style.left = a+"px"
+		Tenazin.style.top = b+"px"
+
+		Sidney.style.left = c+"px"
+		Sidney.style.top = d+"px"
+	}
+		setInterval(boom, 200)
+
+	</script>
+
+</body>
+</html>
