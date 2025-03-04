@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		.pieces{
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			background-color: sandybrown;
+			font-size: 0;
+			margin: -4px;
+
+		}
+	</style>
+</head>
+<body>
+<div id="circle"></div>
+	<script type="text/javascript">
+		
+		function makePiece (placeholder){
+			let square=document.createElement("div")
+			square.classList.add("pieces")
+			document.body.appendChild(square)
+			// square.innerHTML = placeholder
+
+			square.id="piece"+ placeholder
+
+			square.addEventListener("click", function(){
+				square.style.backgroundColor="white"
+				console.log(placeholder)
+			})
+		}
+
+		for(let i=0; i<10000;i++){
+			makePiece(i)
+		}
+	</script>
+
+</body>
+</html>

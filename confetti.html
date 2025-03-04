@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+
+	.rain{
+		background-color:darkblue;
+		opacity:50;
+		position:absolute;
+
+	}
+	</style>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function makeRain(){
+			let raindrop = document.createElement("div")
+			document.body.appendChild(raindrop)
+			raindrop.classList.add("rain")
+
+			raindrop.style.height=25+"px"
+			raindrop.style.width=5+"px"
+			raindrop.style.top=Math.random()*10+"px"
+			raindrop.style.left=Math.random()*1800+"px"
+
+			function fall(){
+				raindrop.style.top= parseInt(raindrop.style.top)+ (Math.random()*100)+"px"
+				console.log(parseInt(raindrop.style.top))
+			}
+
+			setInterval(fall, 100)
+		}
+
+		for(let i=0; i<7500; i=i+1){
+			makeRain(i)
+		}
+
+
+
+	</script>
+
+</body>
+</html>

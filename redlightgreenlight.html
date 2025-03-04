@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+
+		body{
+			background-color:sandybrown;
+		}
+		
+		#player{
+			width:100px;
+			height:100px;
+			position:absolute;
+			left: 675px;
+			top:800px;
+			background-image:url(player.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			z-index:3;
+		}
+
+		#border1{
+			width:75px;
+			height:900px;
+			position:absolute;
+			top:0px;
+			left:0px;
+			background-color:green;
+			z-index:2;
+		}
+
+		#border2{
+			width:75px;
+			height:900px;
+			position:absolute;
+			top:0px;
+			left:1370px;
+			background-color:green;
+			z-index:2;
+		}
+
+		#startline{
+			width:1300px;
+			height:25px;
+			position:absolute;
+			top:800px;
+			left:75px;
+			background-color:lightpink;
+		}
+
+			#endline{
+			width:1300px;
+			height:25px;
+			position:absolute;
+			top:25px;
+			left:75px;
+			background-color:lightpink;
+/*			font-size:100px;*/
+			font-family:courier;
+		}
+
+		#text{
+			position: relative;
+		}
+
+
+
+
+	</style>
+	
+</head>
+<body>
+	<div id = "player"></div>
+	<div id = "border1"></div>
+	<div id = "border2"></div>
+	<!-- <center><div id="text">click to play</div></center> -->
+	<div id = "startline"></div>
+	<div id = "endline"></div>
+	<!-- <audio src="doll.m4a" id = "song"></audio> -->
+
+
+	<script type="text/javascript">
+
+		//text.addEventListener("click", function(){
+			//text.innerText=""
+	//	})
+
+
+		let counter = 0;
+
+
+
+		function makeRed (){
+			border1.style.backgroundColor = "red"
+				border2.style.backgroundColor = "red"
+				counter = 1;
+			//		song.play()
+				
+			}
+
+
+		function makeGreen (){
+			border1.style.backgroundColor = "green"
+				border2.style.backgroundColor = "green"
+				counter = 0;
+
+		}
+
+		let waitTime = Math.floor(Math.random()*4000)
+
+		function lightswitch(){
+
+			if(counter==0){
+				setTimeout(makeRed, waitTime)
+				
+			}
+
+		 if(counter==1){
+				setTimeout(makeGreen, waitTime)
+			}
+		}
+		
+		setInterval(lightswitch, 100)
+
+
+		let ptop = 800
+	player.style.top = top + "px"
+
+		
+		document.addEventListener("keydown", function(event){
+			console.log("hello?")
+
+		if(event.keyCode==38){
+			player.style.top = ptop + "px"
+			ptop = ptop -7;
+
+		if(event.keyCode==38 && counter==1){
+			player.style.top = "800px"
+		}	
+			}})
+
+
+	
+	</script>
+
+</body>
+</html>
