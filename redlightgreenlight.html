@@ -96,6 +96,9 @@
 				border2.style.backgroundColor = "red"
 				counter = 1;
 			//		song.play()
+												lightswitch()
+
+
 				
 			}
 
@@ -104,28 +107,28 @@
 			border1.style.backgroundColor = "green"
 				border2.style.backgroundColor = "green"
 				counter = 0;
+												lightswitch()
 
 		}
 
-		let waitTime = Math.floor(Math.random()*4000)
 
 		function lightswitch(){
 
 			if(counter==0){
+				let waitTime = 1000+ (Math.floor(Math.random()*5000))
 				setTimeout(makeRed, waitTime)
-				
 			}
 
 		 if(counter==1){
+		 	let waitTime = 1000+ (Math.floor(Math.random()*5000))
 				setTimeout(makeGreen, waitTime)
 			}
 		}
 		
-		setInterval(lightswitch, 100)
 
 
 		let ptop = 800
-	player.style.top = top + "px"
+	player.style.top = ptop + "px"
 
 		
 		document.addEventListener("keydown", function(event){
@@ -135,8 +138,13 @@
 			player.style.top = ptop + "px"
 			ptop = ptop -7;
 
+
+
+
 		if(event.keyCode==38 && counter==1){
-			player.style.top = "800px"
+			ptop = 800;
+
+
 		}	
 			}})
 
