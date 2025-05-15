@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+
+		.rain{
+			position:absolute;
+			background-image:url(mollyclicker.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			z-index:0;
+		}
+		
+		#clicker{
+			width: 200px;
+			height: 200px;
+			background-image:url(mollyclicker.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			left:625px;
+			top:100px;
+			z-index:1;
+		}
+
+		#computer{
+			width:100px;
+			height:100px;
+			background-image:url(computer.png);
+			background-repeat: no-repeat;
+			background-size:contain;
+			position:absolute;
+			top:400px;
+			left:10px;
+			z-index:3;
+		}
+
+		#tenzin{
+			width:100px;
+			height:100px;
+			background-image:url(tenzin.png);
+			background-repeat: no-repeat;
+			background-size:contain;
+			position:absolute;
+			top:515px;
+			left:10px;
+			z-index:3;
+		}
+
+		#outlet{
+			width:100px;
+			height:100px;
+			background-image:url(outlet.png);
+			background-repeat: no-repeat;
+			background-size:contain;
+			position:absolute;
+			top:615px;
+			left:10px;
+			z-index:3;
+		}
+
+		#luck{
+			width:100px;
+			height:90px;
+			background-image:url(luck.png);
+			background-repeat: no-repeat;
+			background-size:contain;
+			position:absolute;
+			top:710px;
+			left:15px;
+			z-index:3;
+		}
+
+		#computerbuy{
+			width:300px;
+			height:75px;
+			background-image:url(buy.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			top:410px;
+			left:1300px;
+			z-index:2;
+		}
+
+		#tenzinbuy{
+			width:300px;
+			height:75px;
+			background-image:url(buy.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			top:510px;
+			left:1300px;
+			z-index:2;
+		}
+
+		#outletbuy{
+			width:300px;
+			height:75px;
+			background-image:url(buy.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			top:610px;
+			left:1300px;
+			z-index:2;
+		}
+
+		#luckbuy{
+			width:300px;
+			height:75px;
+			background-image:url(buy.png);
+			background-size:contain;
+			background-repeat: no-repeat;
+			position:absolute;
+			top:710px;
+			left:1300px;
+			z-index:2;
+		}
+
+		#upgradebar1{
+			width:1425px;
+			height:95px;
+			background-color:green;
+			top:400px;
+			position:absolute;
+			z-index:1;
+		}
+
+		#upgradebar2{
+			width:1425px;
+			height:95px;
+			background-color:green;
+			top:500px;
+			position:absolute;
+			z-index:1;
+		}
+
+		#upgradebar3{
+			width:1425px;
+			height:95px;
+			background-color:green;
+			top:600px;
+			position:absolute;
+			z-index:1;
+		}
+
+		#upgradebar4{
+			width:1425px;
+			height:95px;
+			background-color:green;
+			top:700px;
+			position:absolute;
+			z-index:1;
+		}
+
+		#upgradebar5{
+			width:1425px;
+			height:95px;
+			background-color:green;
+			top:800px;
+			position:absolute;
+			z-index:1;
+		}
+
+		h1{
+			position:absolute;
+			left:610px;
+			z-index:1;
+			background-color:rgba(255, 255, 255, 0.7);
+
+		}
+
+		h2{
+			position:absolute;
+			left:630px;
+			top:300px;
+			z-index:1;
+		background-color:rgba(255, 255, 255, 0.5);
+
+		}
+
+		h3{
+			position:absolute;
+			top:422px;
+			left:125px;
+			z-index:2;
+		}
+
+		h4{
+			position:absolute;
+			top:422px;
+			left:600px;
+			z-index:2;
+		}
+
+		h5{
+			position:absolute;
+			top:505px;
+			left:125px;
+			z-index:2;
+			font-size: 20px;
+		}
+
+		h6{
+			position:absolute;
+			top:505px;
+			left:600px;
+			z-index:2;
+			font-size: 15px;
+		}
+
+		h7{
+			position:absolute;
+			top:635px;
+			left:125px;
+			z-index:2;
+			font-size: 22px;
+		}
+
+		h8{
+			position:absolute;
+			top:635px;
+			left:615px;
+			z-index:2;
+			font-size: 17px;
+		}
+		
+		h9{
+			position:absolute;
+			top:735px;
+			left:125px;
+			z-index:2;
+			font-size: 22px;
+		}
+
+		h10{
+			position:absolute;
+			top:735px;
+			left:525px;
+			z-index:2;
+			font-size: 18px;
+		}
+
+
+
+	</style>
+	
+</head>
+<body>
+
+<div id="transparent">
+<h1>Click the Molly!</h1>
+<h2>Total Mollies: <span id="mollies"></span></h2>
+</div>
+
+
+<h3> Computer Crypto Farmers! Cost:<span id="computercost"></span> Mollies</h3>
+<h4> Doubles your clicking power! You have: <span id="computers"></span>/6</h4>
+<h5> Hired Helper! Cost:100 Mollies</h5>
+<h6> Earns 1 Molly per second! You have: <span id="tenzins"></span>/100</h6>
+<h7> Power Outlets! Cost:<span id="outletcost"></span> Mollies</h7>
+<h8> Clicking power times 4! You have: <span id="outlets"></span>/3</h8>
+<h9> Lucky Mollies! Cost:50000 Mollies</h9>
+<h10> Every click has a 1 in 100 chance of being worth 100000 Mollies! You have: <span id="luckymollies"></span>/1</h10>
+<div id = "clicker"></div>
+<div id = "computer"></div>
+<div id = "computerbuy"></div>
+<div id = "tenzin"></div>
+<div id = "tenzinbuy"></div>
+<div id = "outlet"></div>
+<div id = "outletbuy"></div>
+<div id = "luck"></div>
+<div id = "luckbuy"></div>
+<div id = "upgradebar1"></div>
+<div id = "upgradebar2"></div>
+<div id = "upgradebar3"></div>
+<div id = "upgradebar4"></div>
+<div id = "upgradebar5"></div>
+
+
+<script type="text/javascript">
+
+
+	let counter=0;
+	mollies.innerText = counter;
+	let multiplier = 1;
+	let idlemollies = 0;
+	
+	let computercounter = 0;
+	computers.innerText = computercounter;
+	let computermultiplier = 1;
+	computercost.innerText = computermultiplier * 50;
+
+	let tenzincounter = 0;
+	tenzins.innerText = tenzincounter;
+
+	let outletcounter = 0;
+	outlets.innerText = outletcounter;
+	let outletmultiplier = 1;
+	outletcost.innerText = outletmultiplier * 1000;
+
+	let luckymolliescounter = 0;
+	luckymollies.innerText = luckymolliescounter;
+	let giveluck = 0;
+
+	
+clicker.addEventListener("click", function(){
+
+randomgen=Math.round(Math.random()*100)
+
+if(giveluck==1 && randomgen<100){
+	counter = counter + 1 * multiplier;
+ 	mollies.innerText = counter;
+}
+
+else if(giveluck == 0){
+	counter = counter + 1 * multiplier;
+ 	mollies.innerText = counter;
+}
+
+else if(giveluck==1 && randomgen==100){
+	counter = counter + 100000;
+	mollies.innerText = counter;
+}
+
+
+})
+
+function idleCash(){
+	counter = counter + idlemollies;
+	mollies.innerText = counter;
+}
+
+setInterval(idleCash, 1000)
+
+computerbuy.addEventListener("click", function(){
+	if(counter>=50 * computermultiplier && computercounter<6){
+		multiplier = multiplier * 2;
+		counter = counter - 50 * computermultiplier;
+		mollies.innerText = counter;
+		computercounter = computercounter + 1;
+		computers.innerText = computercounter;
+		computermultiplier = computermultiplier * 5;
+		computercost.innerText = computermultiplier * 50;
+	}
+})
+
+tenzinbuy.addEventListener("click", function(){
+	if(counter>=100 && tenzincounter<100){
+		idlemollies = idlemollies+1;
+		counter = counter - 100;
+		mollies.innerText = counter;
+		tenzincounter = tenzincounter + 1;
+		tenzins.innerText = tenzincounter;
+
+	}
+})
+
+outletbuy.addEventListener("click", function(){
+	if(counter>=1000 && outletcounter<3){
+		multiplier = multiplier * 4;
+		counter = counter - 1000 * outletmultiplier;
+		mollies.innerText = counter;
+		outletcounter = outletcounter + 1;
+		outlets.innerText = outletcounter;
+		outletmultiplier = outletmultiplier * 10;
+		outletcost.innerText = outletmultiplier * 1000;
+	}
+})
+
+luckbuy.addEventListener("click", function(){
+	if(counter>=50000 && giveluck==0){
+	counter = counter - 50000;
+	mollies.innerText = counter;
+	luckymolliescounter = luckymolliescounter + 1;
+	luckymollies.innerText = luckymolliescounter;
+	giveluck = 1;
+	}
+})
+
+
+		function makeRain(){
+			let raindrop = document.createElement("div")
+			document.body.appendChild(raindrop)
+			raindrop.classList.add("rain")
+
+			raindrop.style.height=40+"px"
+			raindrop.style.width=15+"px"
+			raindrop.style.top=Math.random()*10+"px"
+			raindrop.style.left=Math.random()*1800+"px"
+
+			function fall(){
+				if(parseInt(raindrop.style.top) > 1000){
+					raindrop.style.top= "-300px"
+
+				}
+				else{
+
+				raindrop.style.top= parseInt(raindrop.style.top)+ (Math.random()*100)+"px"
+				console.log(parseInt(raindrop.style.top))
+				}
+				
+
+
+				
+			}
+
+			setInterval(fall, 100)
+
+
+		}
+
+		for(let i=0; i<5000; i=i+1){
+			makeRain(i)
+		}
+
+
+
+</script>
+
+
+</body>
+</html>

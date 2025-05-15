@@ -12,16 +12,33 @@
 				color: white;
 			}
 
+			#surprisemolly{
+				width:250px;
+				height:250px;
+				position:absolute;
+				top:650px;
+				left:550px;
+				border-radius:50%;
+				background-image:url(molly.png);
+				background-size:contain;
+				background-repeat: no-repeat;
+				animation-duration:5s;
+				animation-iteration-count: 1;
+				animation-name:mollysurprise;
+				z-index:12;
+				opacity:0;
+			}
+
 			#plane{
 				width:250px;
 				height:100px;
-				position:relative;
+				position:absolute;
 				top:750px;
-				left:830px;
+				left:0px;
 				background-image:url(plane.png);
 				background-size: contain;
 				background-repeat: no-repeat;
-				z-index:10;
+				z-index:20;
 			}
 
 			#Seagull1{
@@ -141,9 +158,10 @@
 				background-image:url(sun.png);
  				background-size:contain;
  				animation-duration:6s;
- 				position:relative;
+ 				position:absolute;
  				z-index: 5;
  				top:0px;
+ 				left:575px;
 
 
  			}
@@ -154,9 +172,10 @@
 				background-image:url(moon.png);
  				background-size:contain;
  				animation-duration:6s;
- 				position:relative;
+ 				position:absolute;
  				z-index: 5;
  				top:0px;
+ 				left:575px;
 
 
  			}
@@ -230,6 +249,16 @@
  				z-index:2;
 
  			}
+
+ 			@keyframes mollysurprise{
+ 				0%{opacity:0;}
+
+ 				25%{opacity:100;}
+
+ 				50%{rotate:360deg;}
+
+ 				100%{opacity:0;}
+ 				}
 			
 			@keyframes sunset{
 				0%{top:0px;}
@@ -443,7 +472,7 @@
 
 
  <center>
- 	<div id="plane"></div>
+ 	<div id="surprisemolly"></div>
  	<div id="water"></div>
  	<div id="sky"></div>
  	<div id="sun"></div>
@@ -462,6 +491,9 @@
  <a href="game.html"><div  id="cloud4"></div></a>
  <h1>Harry Patrick</h1>
  </center>
+
+  	<div id="plane"></div>
+
  
 
  	<script type="text/javascript">
@@ -573,7 +605,7 @@ function classChanges(){
 
  	) // end of event listener
 
- 		let left = 700
+ 		let left = 1150
 	plane.style.left = left + "px"
 
 	document.addEventListener("keydown", function(event){
@@ -583,9 +615,10 @@ function classChanges(){
 			left = left -10;
 		}
 
-		else if(plane.style.left < -550 + "px"){
+		else if(parseInt(plane.style.left) < -550){
 			if(event.keyCode==37){
-				plane.style.left= -550 + "px"
+				plane.style.left= "-550px"
+				surprisemolly.style.animationName = "mollysurprise";
 			}
 			
 		}
